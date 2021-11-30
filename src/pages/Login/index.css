@@ -1,0 +1,12 @@
+#login-form {
+  text-align: center;
+}
+.buttonsDiv {
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  color: white;
+}
