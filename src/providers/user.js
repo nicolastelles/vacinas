@@ -23,4 +23,4 @@ export const UserProvider = (props) => {
     )
 }
 
-export const useUser = () => React.useContext(UserContext) 
+export const useUser = () => React.useContext(UserContext)

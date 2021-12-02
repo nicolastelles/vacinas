@@ -1,40 +1,27 @@
-#adicionar-vacina{
-    margin: 3rem auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 60%;
-    align-items: center;
-
-}
-
 #adicionar-vacina-form{
-    width: 50%;
-    margin: auto auto;
-} 
+    text-align: center;
+}
 
-#adicionar-vacina-form label{
-    margin:auto auto 1rem auto;
+ #update-vacina-form{
+    text-align: center;
+    margin: 2rem auto;
 }
-#modal-editar-vacina{
-    color: black;
-    margin: 3rem auto;
-}
-#table-list-vacina{
-    word-wrap: break-word;
-    word-break: break-all;
-    table-layout: fixed;
-}
-@media (max-width:1365px) {
-    #adicionar-vacina-form{
-        width: 60%;
-    }
-    #adicionar-vacina{
-        width: 100%;
-    }
-    #modal-editar-vacina{
-        width: 70%;
-    }
-    
+/* 
+input , select, textarea{
+    margin: 1rem auto;
+    width: calc(100% - 1.075rem);
+    border-radius: 0.3rem;
+    padding: 0 0.7rem;
+    font-size: 1.15rem;
+    background-color: white;
+    border: 1px solid gray;
+    height: 40px;
+} */
 
+#adicionar-vacina-form input+button, #update-vacina-form input+button{
+   margin-top: 20px;
+}
+
+form+#table-list-vacina{
+    margin: 1.2rem auto;
 }

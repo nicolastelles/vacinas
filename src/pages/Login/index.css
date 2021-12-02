@@ -1,17 +1,17 @@
-#login{
-    width: 45%;
-    margin: 3rem auto;
+#login-form {
+  text-align: center;
+}
+.buttonsDiv {
+  gap: 15px;
+  display: flex;
+  justify-content: center;
 }
 
-#BoasVindas{
-    width: 85%;
+p {
+  color: white;
 }
-#alertLogin>div{
-    width: 100%;
+
+.foot-lnk a:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
-@media (max-width:1365px) {
-    #login{
-        width: 50%;
-        margin: 5rem auto;
-    }
-} 

@@ -1,7 +1,11 @@
-#BoasVindas{
-    width: 100%;
-    margin: 3rem auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-} 
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: url(/src/vacinas.jpg);
+}

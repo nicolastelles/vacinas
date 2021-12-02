@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
+//import { Row, Container, Col, Form, InputGroup, FormControl, Button, Table } from 'react-bootstrap';
 import Menu from '../../components/menu';
-import { Form, FormGroup, Label, Input, Button, Alert, Table, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
+import Alert from '../../components/alert'
 import api from '../../utils/api';
-import "./index.css"
+// import "./index.css"
  
 const Dados = () => {
     api.defaults.headers.Authorization = `Bearer ${localStorage.getItem("token")}`
@@ -20,7 +20,7 @@ const Dados = () => {
         }).catch(err => {
             let errors = []
             err.response.data.error.forEach(error => {
-                errors.push(<Alert color="danger">{error}</Alert>)
+                errors.push(<Alert tema="danger" conteudo={error} />)
             })
         })
 
@@ -37,41 +37,39 @@ const Dados = () => {
         }).catch(err => {
             let errors = []
             err.response.data.error.forEach(error => {
-                errors.push(<Alert color="danger">{error}</Alert>)
+                errors.push(<Alert tema="danger" conteudo={error} />)
             })
         })
 
     }
     
-    return ( 
+    return (
+
         <div>
             <Menu />
             <div className="container" id="update-dados" >
-
-                <Form id="form-update-email" onSubmit={handleUpdateEmail}>
-                    <FormGroup>
-                        <Label htmlFor="mail" className="h4">Email:</Label><br />
-                        <Input id="email" name="mail" placeholder="email@email.com" type="email" />
-                    </FormGroup>
-                    <br />
-                    <Button block color="primary" type="submit">Atualizar</Button>
-                </Form>
-                <hr id="linhaSeparadora"/>
-                <br /><br />
-                <Form id="form-update-senha" onSubmit={handleUpdateSenha}>
-                    <FormGroup>
-                        <Label htmlFor="senha" className="h4">Senha:</Label><br />
-                        <Input id="senha" name="senha" placeholder="Sua nova senha aqui" type="password" />
-                    </FormGroup>
-                    <br />
-                    <Button block color="primary" type="submit">Atualizar</Button>
-                </Form>
-                <br />
-                {alertDiv.map(a => a)}
-
+                <div className="row">
+                    <div className="col-md-12">
+                        <form id="form-update-email" onSubmit={handleUpdateEmail}>
+                            <label htmlFor="mail" className="form-label">Email:</label>
+                            <input required className="form-control" name="mail" type="email" placeholder="email@email.com" aria-label="Email" aria-describedby="" />
+                            <br />
+                            <button className="btn btn-primary" type="submit" id="btn-update-email">Atualizar</button>
+                        </form>
+                        <br />
+                        <hr />
+                        <form id="form-update-senha" onSubmit={handleUpdateSenha}>
+                            <label htmlFor="senha" className="form-label">Senha:</label>
+                            <input name="senha" className="form-control" required type="password" aria-label="Senha" placeholder="Senha" aria-describedby="" />
+                            <br />
+                            <button className="btn btn-primary" type="submit" id="btn-update-senha">Atualizar</button>
+                        </form>
+                        {alertDiv.map(a => a)}
+                    </div>
+                </div>
             </div>
         </div>
     )
 }
 
-export default Dados;
+export default Dados

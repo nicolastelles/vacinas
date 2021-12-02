@@ -1,27 +1,26 @@
-#adicionar-registro{
-    margin: 3rem auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 60%;
-    align-items: center;
-
-}
-#table-list-registro{
-    width: 70%;
-    word-wrap: break-word;
-    table-layout: auto;
-}
-#modal-editar-registro{
-    color: black;
-    margin: 3rem auto;
+#adicionar-registro-form {
+    text-align: center;
 }
 
-@media (max-width:1365px) {
+#adicionar-registro-form select{
+    margin: 1rem auto;
+}
 
-    #modal-editar-registro{
-        width: 70%;
-    }
-    
+#adicionar-registro-form button{
+    margin: 1rem auto 2rem auto;
+}
 
-} 
+#update-registro-form input {
+    margin: 1rem auto;
+}
+
+#update-registro-form select{
+    margin: 1rem auto;
+}
+
+ #update-registro-form select+button{
+    margin: 2rem auto 1rem auto;
+}
+form+#table-list-registro{
+    margin: 1rem auto;
+}

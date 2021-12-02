@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import { useHistory } from "react-router-dom";
+//import { Button, Form, Container } from 'react-bootstrap';
+import Alert from '../../components/alert'
 import api from '../../utils/api';
-
 import "./index.css"
-import { Form, FormGroup, Label, Input, Button, Alert } from 'reactstrap';
 
 const Cadastro = () => {
     const history = useHistory();
     const redirectLogin = () => history.push("/")
     const [usuario, setUsuario] = useState({ mail: "", senha: "", perfil: "" })
     const [alertDiv, setAlertDiv] = useState([])
- 
+
     const handleChange = (e) => {
         const value = e.target.value;
         setUsuario({
@@ -30,34 +30,36 @@ const Cadastro = () => {
 
         }).catch(err => {
             let errors = []
+
             err.response.data.error.forEach(error => {
-                errors.push(<Alert color="danger">{error}</Alert>)
+                errors.push(<Alert tema="danger" conteudo={error} />)
             })
+            setAlertDiv(errors)
         })
     }
 
     return (
+        
         <div className="container" id="cadastro">
-
-
-            <Form id="cadastro-form" onSubmit={handleCadastro}>
-                <FormGroup>
-                    <Label htmlFor="email" className="h5">Email</Label>
-                    <Input id="email" value={usuario.mail} onChange={handleChange} name="mail" placeholder="email@email.com" type="email"/>
-                </FormGroup>
-                <br />
-                <FormGroup>
-                    <Label htmlFor="senha" className="h5">Senha</Label>
-                    <Input id="senha" value={usuario.senha} onChange={handleChange} name="senha" placeholder="Sua senha" type="password"/>
-                </FormGroup>
-                {alertDiv.map(a => a)}
-                <Button block color="primary" type="submit">Cadastrar</Button>
-                <br />
-                <Button block color="secondary" type="button" onClick={redirectLogin}>Voltar para o login</Button>
-
-            </Form>
+            <div className="row">
+                <div className="col-md-12">
+                    <br/>
+                    <form id="cadastro-form" onSubmit={handleCadastro}>
+                        <label htmlFor="mail" className="form-label">Email</label><br />
+                        <input type="email" className="form-control" name="mail" value={usuario.mail} onChange={handleChange} placeholder="email@email.com" /><br />
+                        <label htmlFor="senha">Senha</label><br />
+                        <input value={usuario.senha} className="form-control" placeholder="senha" name="senha" onChange={handleChange} type="password" />
+                        {alertDiv.map(a => a)}
+                        <br/>
+                        <div className="buttonsDiv">
+                            <button className="btn btn-primary" type="submit">Cadastrar</button>
+                            <button className="btn btn-primary" onClick={redirectLogin}>Voltar para o login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }
 
-export default Cadastro;
+export default Cadastro

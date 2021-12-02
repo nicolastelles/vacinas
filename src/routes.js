@@ -37,7 +37,7 @@ function Routes(){
         }}/>
     )
 
-                 
+                
     const NotFound = () =>(<Redirect to ={{pathname:"/home"}}/>)
     return(
         <BrowserRouter>

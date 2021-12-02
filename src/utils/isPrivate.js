@@ -11,4 +11,4 @@ const isPrivate = (onlyAdmin) => {
             return true
         }
 }
-export default isPrivate;
+export default isPrivate

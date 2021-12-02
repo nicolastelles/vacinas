@@ -6,4 +6,4 @@ const isAuth = (token) => {
         return false
     }
 }
-export default isAuth;
+export default isAuth
