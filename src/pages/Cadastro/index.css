@@ -1,9 +1,10 @@
-#cadastro-form{
-    text-align: center;
+#cadastro{
+    width: 35%;
+    margin: 3rem auto;
 }
-
-.buttonsDiv{
-    gap: 15px;
-    display: flex;
-    justify-content: center;
-}
+@media (max-width:1365px) {
+    #cadastro{
+        width: 50%;
+        margin: 5rem auto;
+    }
+} 

@@ -1,7 +1,8 @@
-#BoasVindas{
-    width: 100%;
+#mudar-perfil{
     margin: 3rem auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 50%;
+    align-items: center;
 } 

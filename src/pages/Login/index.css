@@ -1,12 +1,17 @@
-#login-form {
-  text-align: center;
-}
-.buttonsDiv {
-  gap: 15px;
-  display: flex;
-  justify-content: center;
+#login{
+    width: 45%;
+    margin: 3rem auto;
 }
 
-p {
-  color: white;
+#BoasVindas{
+    width: 85%;
 }
+#alertLogin>div{
+    width: 100%;
+}
+@media (max-width:1365px) {
+    #login{
+        width: 50%;
+        margin: 5rem auto;
+    }
+} 

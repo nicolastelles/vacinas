@@ -1,15 +1,26 @@
+.btn-menu{
+    background-color: var(--color-background-secondary) !important;
+    color: white !important;
+    transition: .3s !important;
+    border-radius: .1rem !important;
+    font-size: 1.3rem;
+
+} 
+
+.btn-menu:hover{
+    background-color: var(--color-background-secondary-hover) !important;
+    cursor: pointer;
+}
 .menu{
-    margin: 15px 0px;
-}
-
-.menu .navbar-nav{
     display: flex;
-    gap: 15px;
-    justify-content: center;
-}
+    height: 3.3rem;
+    margin: 0rem auto;
+    background-color: var(--color-background-secondary) !important;
 
-@media screen and (max-width: 600px) {
-    .menu .navbar-nav{
-        padding-top: 10px;
-    }
+} 
+
+#navbar{
+    justify-content: center;
+    width: 100%;
+    text-align: center;
 }

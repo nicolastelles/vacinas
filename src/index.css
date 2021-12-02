@@ -1,326 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root{
+  --color-background-login: #526f85;
+  --color-background-primary: #0b80da;
+  --color-background-primary-hover: #0a6fbd;
 
-body {
-  margin: 0;
-  color: #6a6f8c;
-  background: #c8c8c8;
-  font: 600 16px/18px "Open Sans", sans-serif;
-}
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-.clearfix:after,
-.clearfix:before {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-  display: block;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  --color-background-secondary: #223c50;
+  --color-background-secondary-hover: #1d74b6;
 
-.login-wrap {
-  width: 100%;
-  margin: auto;
-  max-width: 525px;
-  min-height: 670px;
-  position: relative;
-  background: url(vacinas.jpg)
-    /* background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) */
-    no-repeat center;
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.login-html {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  padding: 90px 70px 50px 70px;
-  background: rgba(40, 57, 101, 0.9);
+ 
+html, body{
+  overflow-x:hidden;
+  width: 100vw;
+  height: 100vh;
+  margin:0;
+  padding:0;
+  background-color: var(--color-background-login);
+  color: rgb(255, 255, 255);
+  
+
+
 }
-.login-html .sign-in-htm,
-.login-html .sign-up-htm {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  transition: all 0.4s linear;
+tr{
+  color: rgb(255, 255, 255);
+
 }
-.login-html .sign-in,
-.login-html .sign-up,
-.login-form .group .check {
-  display: none;
+thead{
+  background-color: var(--color-background-secondary-hover);
 }
-.login-html .tab,
-.login-form .group .label,
-.login-form .group .button {
-  text-transform: uppercase;
+tbody{
+  background-color: var(--color-background-secondary);
+
 }
-.login-html .tab {
-  font-size: 22px;
-  margin-right: 15px;
-  padding-bottom: 5px;
-  margin: 0 15px 10px 0;
-  display: inline-block;
-  border-bottom: 2px solid transparent;
-}
-.login-html .sign-in:checked + .tab,
-.login-html .sign-up:checked + .tab {
-  color: #fff;
-  border-color: #1161ee;
-}
-.login-form {
-  min-height: 345px;
-  position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-.login-form .group {
-  margin-bottom: 15px;
-}
-.login-form .group .label,
-.login-form .group .input,
-.login-form .group .button {
-  width: 100%;
-  color: #fff;
-  display: block;
-}
-.login-form .group .input,
-.login-form .group .button {
-  border: none;
-  padding: 15px 20px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.1);
-}
-.login-form .group input[data-type="password"] {
-  text-security: circle;
-  -webkit-text-security: circle;
-}
-.login-form .group .label {
-  color: #aaa;
-  font-size: 12px;
-}
-.login-form .group .button {
-  background: #1161ee;
-}
-.login-form .group label .icon {
-  width: 15px;
-  height: 15px;
-  border-radius: 2px;
-  position: relative;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-}
-.login-form .group label .icon:before,
-.login-form .group label .icon:after {
-  content: "";
-  width: 10px;
-  height: 2px;
-  background: #fff;
-  position: absolute;
-  transition: all 0.2s ease-in-out 0s;
-}
-.login-form .group label .icon:before {
-  left: 3px;
-  width: 5px;
-  bottom: 6px;
-  transform: scale(0) rotate(0);
-}
-.login-form .group label .icon:after {
-  top: 6px;
-  right: 0;
-  transform: scale(0) rotate(0);
-}
-.login-form .group .check:checked + label {
-  color: #fff;
-}
-.login-form .group .check:checked + label .icon {
-  background: #1161ee;
-}
-.login-form .group .check:checked + label .icon:before {
-  transform: scale(1) rotate(45deg);
-}
-.login-form .group .check:checked + label .icon:after {
-  transform: scale(1) rotate(-45deg);
-}
-.login-html
-  .sign-in:checked
-  + .tab
-  + .sign-up
-  + .tab
-  + .login-form
-  .sign-in-htm {
-  transform: rotate(0);
-}
-.login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
-  transform: rotate(0);
+tbody>tr:hover{
+  background-color: var(--color-background-secondary-hover);
+
 }
 
-.hr {
-  height: 2px;
-  margin: 60px 0 50px 0;
-  background: rgba(255, 255, 255, 0.2);
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 1rem !important;
+  font-size: 1.2rem;
+  align-items: center;
+
 }
-.foot-lnk {
+
+select{
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+}
+.alert{
+  width: 50%;
   text-align: center;
 }
 
-/*
-:root{
-    --color-background-login: #5d86a5;
-    --color-background-primary: #0b80da;
-    --color-background-primary-hover: #0a6fbd;
-
-    --color-background-secondary: #0c5186;
-    --color-background-secondary-hover: #1d74b6;
-
-    --color-background-info:#084298;
-    --color-border-info:#b6d4fe;
-    --color-info: #084298;
-
-    --color-background-success:#d1e7dd;
-    --color-border-success:#badbcc;
-    --color-success: #0f5132;
-
-    --color-background-danger:#f8d7da;
-    --color-border-danger:#f5c2c7;
-    --color-danger: #842029;
-
-}
-
-html, body{
-    overflow-x:hidden;
-    margin:0;
-    padding:0;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
-
-.btn-full{
-    width: 100%;
-    border: 0;
-}
-
-button{
-    border-radius: .5rem;
-    border-width: .1rem;
-    border-radius: .5rem;
-    line-height: 2rem;
-    font-size: 1.15rem;
-    font-weight: 550;
-}
-
-button:hover{
-    cursor: pointer;
-    transition: .4s;
-
-}
-
-input{
-    height: 2.7rem;
-}
-
-
-label{
-    color: black;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    border-radius: .5rem;
+@media (max-width: 1365px) {
+  :root{
+      font-size: 70%;
   }
-
-  tbody {
-    background-color: white;
-    color: black;
-  }
-  
   td, th {
-    text-align: left;
-    padding: 1rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  th{
-      background-color: #212529;
-      color: white;
+      padding: 0.5rem !important;
   }
 
-  tr:hover{
-    background-color: #e9ecef;
-    border-color: #dee2e6;
-  }
-
-  td center select {
-    text-align: center;
-    font-size: 1.2rem;
-    padding: .4rem;
-  }
-
-
-  .modal {
-    display: block;
-    color: black;
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-    
-  .close:hover,
-  .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-  }
-  .modal-content>span{
-      font-size: 1.5rem;
-  }
-  .modal-content>span>span>#icon{
-        width: 1.5rem;
-  }
-
-  #iconTable:hover{
-      cursor: pointer;
-      color:#aaa;
+  .alert{
+      width: 100%;
 
   }
+}
+.iconTable:hover{
+  cursor: pointer;
+  color:#aaa;
 
-  @media screen and (max-width: 600px) {
-    table {
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-
-  }*/
+}
